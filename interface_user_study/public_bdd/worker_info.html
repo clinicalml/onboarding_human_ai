@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="worker_info.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Teaching to defer Experiment</title>
+
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+  </head>
+  
+  <body  style=" max-width: 100%; overflow-x: hidden;  height: auto;" >
+    <!-- Create Form -->
+    <form id="form" >
+      <h1>
+        Welcome to our experiment! (please read carefully)
+        </h1>
+      <p>
+      After you fill out the information on this page please click the Start Experiment button to proceed. <br>
+      The experiment may contain multiple stages that you will be guided through. <br>
+      Please do not refresh or press back the webpage as you may lose a fraction of your progress. <br>
+      The experiment will contain attention checks that will not modify the question you are asked, but they will be easier questions of the same format. 
+      <br> <strong>    There is a potential  bonus of up to 2$ for good performance on the tasks.
+      </strong>
+
+      <h2>If you have previously completed this study, you are auto-ineligible to complete it again! </h2>
+
+      Your answers to the below questions have no impact on your eligibility to perform the task. <br>
+      Your Prolific IDs will NOT be shared with anyone or used in the study or tied to the information below, they are only collected for matching with the recorded study. <br>
+      By completing this task, you consent to having your responses (excluding age, gender, eyesight and educational ability) be made publicly available for research and educational purposes.
+      </p>
+      <!-- Details -->
+
+      <div class="form-control" >
+        <label for="name" id="label-name">
+          Prolific ID*:
+        </label>
+        <!-- Input Type Text -->
+        <input type="text"
+               id="workerID"
+               name="user_name"
+               placeholder="Enter your Prolific ID" 
+               required/>
+      </div>
+
+
+      <div class="form-control">
+        <label for="age" id="label-age">
+            What is your age? Select most appropriate age range.
+        </label>
+         
+        <!-- Dropdown options -->
+        <select name="age" id="age" required>
+            <option value="" disabled selected hidden>
+            <option value="age1">18-25</option>
+            <option value="age2">25-35</option>
+            <option value="age3">35-50</option>
+            <option value="age4">50+</option>
+        </select>
+    </div>
+
+
+      <div class="form-control">
+        <label for="gender" id="gender-type">
+            What is your gender?
+        </label>
+         
+        <!-- Dropdown options -->
+        <select name="gender" id="gender" required>
+            <option value="" disabled selected hidden>
+            <option value="gender1">Male</option>
+            <option value="gender2">Female</option>
+            <option value="gender3">Non-binary</option>
+            <option value="gender4">Prefer not to answer</option>
+        </select>
+    </div>
+
+
+      <div class="form-control">
+        <label for="education" id="education-level">
+          What is the highest degree or level of school you have completed?
+        </label>
+         
+        <!-- Dropdown options -->
+        <select name="education" id="education" required>
+            <option value="" disabled selected hidden></option>
+            <option value="educ1">Some high school, no diploma, and below</option>
+            <option value="educ2">High school graduate, diploma, or the equivalent</option>
+            <option value="educ3">Some college credit, no degree</option>
+            <option value="educ4">Bachelor's degree (or currently pursuing)</option>
+            <option value="educ5">Graduate degree (or pursuing)</option>
+            <option value="educ6">Prefer not to answer</option>
+        </select>
+    </div>
+
+      <div class="form-control">
+        <label for="ai_ability" id="ai_ability_level">
+          How would you rate your knowledge about Artificial Intelligence (AI) or Machine Learning?
+        </label>
+         
+        <!-- Dropdown options -->
+        <select name="ai_ability" id="ai_ability" required>
+            <option value="" disabled selected hidden>
+            <option value="ai_ability1">I don't know anything about AI</option>
+            <option value="ai_ability2">I have a read about AI but don't know how it works</option>
+            <option value="ai_ability3">I know how AI works at a basic level</option>
+            <option value="ai_ability4">I know how AI works at an expert level and can implement various types of AI</option>
+        </select>
+      </div>
+
+      
+      <div class="form-control">
+        <label for="eyesight" id="label-eyesight">
+          How would you rate your eyesight? Poor indicates any major visual impairments, Excellent denotes 20/20 vision.
+        </label>
+         
+        <!-- Dropdown options -->
+        <select name="eyesight" id="eyesight" required>
+            <option value="" disabled selected hidden>
+            <option value="eyesight1"> Poor </option>
+            <option value="eyesight2">Fair</option>
+            <option value="eyesight3">Good</option>
+            <option value="eyesight4">Excellent</option>
+        </select>
+      </div>
+
+      <div class="form-control">
+        <label for="driving" id="label-driving">
+          How would you rate your driving ability? Answer this question in terms of safety of driving.
+        </label>
+         
+        <!-- Dropdown options -->
+        <select name="driving" id="driving" required>
+            <option value="" disabled selected hidden>
+            <option value="driving1"> I don't drive </option>
+            <option value="driving2"> I very rarely drive or I'm not confident in my ability. </option>
+            <option value="driving3"> My driving ability is average.</option>
+            <option value="driving4">I believe I drive better than most people. </option>
+        </select>
+      </div>  
+
+      <p style="color:red" id="message_highlighted"> </p>
+      <br>
+       <button type="submit" value="submit" id="submitButton">
+        Start Experiment
+      </button> 
+
+   </div>
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+  <script src="./workerinfo_script.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,256 @@
+/* Styling the Form (Color, Padding, Shadow) */
+
+body, html {
+  margin: 10px;
+  padding: 0;
+  font-family: Verdana;
+  text-align: center;
+}
+form {
+  background-color: #fff;
+  text-align: left;
+  max-width: 95%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px auto;
+  padding: 10px 10px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+p {
+  font-size: 130%;
+
+}
+h2{
+  font-size: 1.5vw;
+}
+
+table {
+  font-size: 1vw;
+}
+
+h3{
+  font-size: 3vw;
+}
+label{
+  font-size: 170%;
+}
+/* Styling form-control Class */
+.form-control {
+  text-align: left;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+/* Styling form-control Label */
+.form-control label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Styling form-control input, select, textarea */
+.form-control input,
+.form-control select,
+.form-control textarea {
+  border: 1px solid #777;
+  border-radius: 2px;
+  font-family: inherit;
+  padding: 5px;
+  display: block;
+  width: 95%;
+}
+
+/* Styling form-control Radio button and Checkbox */
+.form-control input[type="radio"],
+.form-control input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+}
+
+
+
+/* image settings */
+#image-container {
+  width: 100vw;
+  max-height: 48vh;
+  margin-bottom: 10px;
+  overflow: auto;
+}
+
+img {
+  max-width: 100vw;
+  width: 80vh;
+  height: 58vh;
+  max-height: 48vh;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.5s;
+}
+ img:hover {
+  transform: scale(1.3);
+
+} 
+
+
+
+
+
+li {
+/* background: url(images/columnbullet.png) no-repeat left 4px; */
+color: #4f4f4f;
+padding-left: 23px;
+margin: 5px 0;
+  list-style-position: inside;
+}
+
+#rgnButtonSet {
+  max-width: 60%;
+  margin-bottom: 10px;
+}
+
+#ai-container {
+  max-width: 60%;
+  margin-bottom: 10px;
+  border-style: solid;
+  margin: 10px auto;
+  padding: 10px 10px;
+}
+
+.two-container{
+  display: flex;
+  /* flex-direction: row;
+  justify-content: space-between; */
+}
+
+#wrong-message {
+  color: red;
+}
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  /* background-color: white !important; */
+  color: white !important;
+  }
+  
+  .btn-secondary{
+    background-color: white !important;
+    color: black !important;
+  }
+
+
+#yesButton{
+  background-color: rgb(247, 84, 84);
+  border: none;
+};
+
+#noButton{
+  background-color: rgb(135, 208, 135);
+  border: none;
+
+};
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.row {
+  display: flex;
+}
+.column {
+  width: 50%;
+}
+
+.main {
+    text-align: center;
+}
+
+
+
+
+.container-all{
+  width: fit-content;
+  margin: 20px auto;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.container{
+  width: 33%;
+  overflow:hidden;
+  height: fit-content;
+  margin:3px;
+  padding: 0;
+  position:relative;
+  float:left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+img {
+  max-width: 100vw;
+  width: 80vh;
+  height: 58vh;
+  max-height: 48vh;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.5s;
+}
+
+.title{
+  position:absolute;
+  display:block;
+  cursor:pointer;
+  top: 35%;
+  display: none;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 1.6em;
+  text-shadow: 1px 5px 10px black;
+  transition-duration: .3s;
+}
+.caption{
+  position:absolute;
+  top: 90%;
+  cursor:pointer;
+  max-width: 80%;
+  text-align:center;
+  left: 50%;
+  text-shadow: 1px 5px 10px black;
+  font-size: 1em;
+  display:none;
+  margin-right: -50%;
+  transition-duration: .3s;
+  transform: translate(-50%, -50%) 
+}
+.container:hover img{
+  /* transform: scale(1.2); */
+  transition-duration: .3s;
+  /* filter: grayscale(50%); */
+  /* opacity: .7; */
+}
+.container:hover span{
+  color:rgb(7, 7, 7);
+  display: block;
+  transition-duration: .3s;
+}
+@media only screen and (max-width: 900px) {
+    .container {
+        width: calc(50% - 6px);
+    }
+}
+@media only screen and (max-width: 400px) {
+    .container {
+        width: 100%;
+    }
+}

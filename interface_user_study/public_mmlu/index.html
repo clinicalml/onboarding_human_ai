@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- https://www.geeksforgeeks.org/build-a-survey-form-using-html-and-css/ -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="index.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>
+    Prolific Study
+  </title>
+
+</head>
+
+<body style=" max-width: 100%; overflow-x: hidden;  height: auto;">
+  <div style="  background-color: #ffffff;   display: table; margin-right: 1%; margin-left: 1%;">
+  <label for="authen_token"> Please enter the code given on Prolific: (the code is the name of the platform you found this study in, lowercase)</label> 
+</br></br>
+  <input type="password" id="authen_token" name="authen_token" required />
+  </br>
+  <p style="color:red" id="message_highlighted"> </p>
+
+ <h1> Answer Multiple Choice Questions</h1>
+
+     <p>
+       You are invited to participate in a research study to how people answer multiple choice questions on various topics.
+        You will be presented with a series of questions and asked to select the correct answer.
+        You may additionally be asked to interact with an AI model and write a few sentences of text. 
+     </p>
+
+     <p>
+       This study will include participants over 18 years of age,  who feel comfortable using an online interface to read and answer
+       questions in English and investigate images. 
+     </p>
+
+     <p>To reiterate, you are eligible for this study if and only if:</p>
+
+     <ul>
+       <li>You are comfortable reading/writing in English.</li>
+       <li>You have not already completed this survey.</li>
+       <li>You are over 18 years of age.</li>
+       <li>You have JavaScript enabled in your browser.</li>
+     </ul>
+
+     <h2>What Will My Participation Involve?</h2>
+
+     <p>
+       If you decide to participate in this research you will be asked to answer questions, write answers to questions in English and interact with AI models.
+     </p>
+
+     <h2>Are There Any Risks To Me?</h2>
+
+     <p>
+       We don't anticipate any risks from participation in this study greater
+       than normal activity.
+     </p>
+
+     <h2>Are There Any Benefits To Me?</h2>
+
+     <p>There are no direct benefits to you other than monetary compensation.</p>
+
+
+
+     <h2>How Will My Confidentiality Be Protected?</h2>
+
+     <p>
+       While there will probably be publications as a result of this study, your
+       name will not be used. Only group characteristics will be published.
+     </p>
+
+     <h2>Whom Should I Contact If I Have Questions?</h2>
+
+     <p>
+       You may ask any questions about the research at any time. If you have
+       questions about the research after you leave today you should contact the
+       researchers, <a href="mailto: hssein.mzannar@gmail.com"> Hussein Mozannar</a>.
+       If you are not satisfied with response of research team, have more
+       questions, or want to talk with someone about your rights as a research
+       participant, you should contact the MIT
+       <a href="https://couhes.mit.edu"
+         >Committee on the Use of Humans as Experimental Subjects (COUHES)</a
+       >. Your participation is completely voluntary. If you begin participation
+       and change your mind you may end your participation at any time without
+       penalty.
+     </p>
+     By pressing the Next button below you consent to performing the study and having the data of your study recorded.
+     <br>
+  <button type="submit" id="submit_token">Next</button>
+</div>
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+
+  <script src="./scripts_auth.js"></script>
+
+</body>
+
+</html>

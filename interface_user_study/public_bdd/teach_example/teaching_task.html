@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <link rel="stylesheet" href="../task.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prolific Study Teach</title>
+  </head>
+
+<body style=" max-width: 100%; overflow-x: hidden;  height: auto;">
+  <script type="text/javascript">
+    function validate(evt) {
+      var theEvent = evt || window.event;
+      var key = theEvent.keyCode || theEvent.which;
+      key = String.fromCharCode(key);
+      var regex = /[]|\./;
+      if (!regex.test(key)) {
+        theEvent.returnValue = false;
+        if (theEvent.preventDefault) theEvent.preventDefault();
+      }
+    }
+  </script>
+  <div >
+    <div id="instructions">
+      <h2 style="font-size: 3vw;" id="instructions_header"> Instructions (scroll down for task)
+      </h2>
+      <p style="text-align: left; font-size: 1.5vw;">
+        - <strong>AI MODEL:  </strong> Images are now blurred and you have access to an Artificial Intelligence (AI) model that provides their prediction
+        <br>
+        - <strong> AI Button: </strong> A new button now appears called "Use AI Answer" in blue and allows you to select the AI's answer which you can then submit.<br>
+        &nbsp &nbsp  &nbsp - Please press the button  if the AI helped with your answer and you want to use it's answer, if you agree with the answer of the AI but got the answer without it's help then don't press the button.<br>
+        &nbsp &nbsp  &nbsp - If the AI predicts there to be a traffic light, it will put a box around it in the image and a score (you can hide or show it with a button below the image)
+        <br>
+        - <strong> Teaching Phase: </strong> The next of examples will help teach you more about the AI through examples where you will receive feedback, after that, there will be a testing phase where the 2$ bonus applies. 
+        <br>
+        <h3 style="text-align: center; font-size: 2vw;">Example (no need to click, only for viewing):</h3>
+
+        <div style="border: 1px solid black; padding: 10px;">
+          <img  id = "myimgAItest" alt="blurredImageAI" src="../test_image_ai.jpg"/> <!-- image will be added with javascript -->
+
+          <h3 style="text-align: center; font-size: 2vw;">Is there a traffic light in the picture?</h3>
+
+          <!-- Your content here -->
+    <div class="row" >
+        <div class="column" style="width:49%;" >
+        <button  class="btn btn-primary" style="   font-size: 2vw; background-color: rgb(135, 208, 135);  border: none; width:22vw; height:7vh;margin-bottom: 1vh;"  id="testyes">Yes</button> <br>
+        <button  class="btn btn-primary" style="  font-size: 2vw; background-color: rgb(247, 84, 84);   border: none; width:22vw;   height:7vh;  "   id="testno">No</button>
+    </div>
+    <div class="column" style="width:49%;" >
+        <h2 id="ai_answer_test"> AI Predicts: Yes </h2>
+        <button  class="btn btn-primary" style="   font-size: 2vw; background-color: rgb(58, 50, 181);  border: none; width:22vw; height:7vh;"  id="testai">Use AI Answer</button>
+    </div>
+    </div>
+    <button class="btn btn-primary" style="font-size: 2vw;  background-color:  rgb(156, 156, 156);  border: none; width:30vw;   height:7vh;  " id="submitButtontest">Submit</button>
+
+  </div>
+</p>
+<p style="text-align: left; font-size: 1.5vw;">
+
+  - We give you the following information about the AI model to help you understand when you should use it's answer and when not to:
+</p>
+<table style="border-collapse: collapse; border-top: 1px solid black; border-bottom: 1px solid black;">
+  <tbody>
+
+    <tr style="border-bottom: 1px solid rgb(2, 1, 1);">
+      <th style="text-align: left; padding: 8px;"><strong>Average AI Accuracy:</strong></th>
+      <td style="padding: 8px;">78%</td>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <th style="text-align: left; padding: 8px;"><strong>Average Human Accuracy:</strong></th>
+      <td style="padding: 8px;">72%</td>
+    </tr> 
+    <tr style="border-bottom: 1px solid black;">
+      <th style="text-align: left; padding: 8px;"><strong>AI Model Input:</strong></th>
+      <td style="padding: 8px;">Blurry Image</td>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <th style="text-align: left; padding: 8px;"><strong>AI Model Output:</strong></th>
+      <td style="padding: 8px;">Prediction of traffic light, bounding box on image showing it's location and a score indicating it's confidence</td>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <th style="text-align: left; padding: 8px;"><strong>Source of Training Data:</strong></th>
+      <td style="padding: 8px;">Dataset of road images from New York and San Francisco and Bay Area. </td>
+    </tr>
+<!--     <tr style="border-bottom: 1px solid black;">
+      <th style="text-align: left; padding: 8px;"><strong>Source of Pre-training Data:</strong></th>
+      <td style="padding: 8px;">Wikipedia, Books</td>
+    </tr> -->
+    <tr>
+      <th style="text-align: left; padding: 8px;"><strong> AI Training Objective:</strong></th>
+      <td style="padding: 8px;">Detect Traffic Lights and other objects in image </td>
+    </tr>
+  </tbody>
+</table>
+<p style="text-align: left; font-size: 1.5vw;">
+  - Now a deeper dive into the AI error/accuracy:
+</p>
+
+<table style="border-collapse: collapse; border-top: 1px solid black; border-bottom: 1px solid black;">
+  <tbody>
+    <tr style="border-top: 1px solid black;">
+      <th style="text-align: left; padding: 8px;"><strong>Category:</strong></th>
+      <td style="padding: 8px;"> Accuracy</td>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <td style="text-align: left; padding: 8px;"><strong> more than 5 traffic lights in image</strong></td>
+      <td style="padding: 8px;">90%</td>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <td style="text-align: left; padding: 8px;"><strong>If there is 1 to 4 traffic lights</strong></td>
+      <td style="padding: 8px;">62%</td>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <td style="text-align: left; padding: 8px;"><strong>If there is no traffic lights</strong></td>
+      <td style="padding: 8px;">86%</td>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <td style="text-align: left; padding: 8px;"><strong>No Cars</strong></td>
+      <td style="padding: 8px;">83%</td>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <td style="text-align: left; padding: 8px;"><strong>Daytime or overcast weather</strong></td>
+      <td style="padding: 8px;">75%</td>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <td style="text-align: left; padding: 8px;"><strong>few pedestrians</strong></td>
+      <td style="padding: 8px;">76%</td>
+    </tr>
+  </tbody>
+</table>
+   </div>
+
+   <button class="btn btn-primary" style="font-size: 2vw;  background-color:  rgb(54, 214, 134);  border: none; width:30vw;   height:7vh;  " type="test_timer_button" name="submit" id="test_timer_button">Please read instructions first</button>
+
+
+
+
+    <divs style="width: 100vw; height: 100vh;"  id="tasks">
+        <div class="progress">
+          <div class="progress-bar" id="prog_bar" role="progressbar" style="width: 0;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
+      <div class="image-container">
+        <!-- hide checkbox with opacity 0 -->
+          <img  id = "myimg" alt="blurredImage" style="display: none;" src="../Loading.gif"/> <!-- image will be added with javascript -->
+          <img  id = "myimgAI" alt="blurredImageAI" src="../Loading.gif"/> <!-- image will be added with javascript -->
+          <button class="btn btn-info" style="   font-size: 1.5vw; "  id="hideButton">Show/Hide AI Box </button>  &nbsp;  &nbsp;  &nbsp;  &nbsp;  
+          <button class="btn btn-info"  style="   font-size: 1.5vw; "  name="show_instr" id="show_instr_button"> Show Instructions</button> </button>
+
+      </div>
+        
+    <div id="prediction_interface">
+      <label for="question1" id="question1">
+        <h3 style="text-align: center; font-size: 2vw;">Is there a traffic light in the picture?</h3>
+      </label>
+    <div id="container_butts" class="row" >
+        <div class="column" style="width:49%;" >
+        <button  class="btn btn-primary" style="   font-size: 2vw; background-color: rgb(135, 208, 135);  border: none; width:22vw; height:7vh;margin-bottom: 1vh;"  id="yesButton">Yes</button> <br>
+        <button  class="btn btn-primary" style="  font-size: 2vw; background-color: rgb(247, 84, 84);   border: none; width:22vw;   height:7vh;  "   id="noButton">No</button>
+    </div>
+    <div class="column" style="width:49%;" >
+        <h3 style=" font-size: 2vw;" id="ai_answer"> AI Predicts: </h2>
+        <button  class="btn btn-primary" style="   font-size: 2vw; background-color: rgb(58, 50, 181);  border: none; width:22vw; height:7vh;"  id="AIButton">Use AI Answer</button>
+    </div>
+    </div>
+    <button class="btn btn-primary" style="font-size: 2vw;  background-color:  rgb(156, 156, 156);  border: none; width:30vw;   height:7vh;  " id="submitButton">Submit</button>
+
+  </div>
+      </break>
+
+      <h5 id="wrong-message"></h5>
+      <br>
+
+      <div id = "feedback_answer" style="border: 1px solid black; padding: 20px;">
+        <div id="feedback_container" class="row">
+          <div class="column" style="width:70vw; text-align: center;  ">
+            <h3 style=" font-size: 2vw;" id="ai_answer_feedback"> AI Predicts: </h2>
+            <h3  style=" font-size: 2vw;" id="correct_overall_or_no"> You answered correctly!</h3>
+            <h3  style=" font-size: 2vw;" id ="was_ai_correct"> The AI was also correct on this example! </h3>
+          </div>
+          <div class="column" style="width:25vw;">
+            <img id="image_feedback" src="../correct.png" style="height:10vh;" alt="feedback">
+          </div>
+          <br />
+        </div>
+        <button class="btn btn-primary" style="font-size: 2vw;  background-color:  rgb(156, 156, 156);  border: none; width:30vw;   height:7vh;  " id="nextButton">Next Example</button>
+      </div>
+
+
+
+    </div>
+    
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+      <script src="./teaching_task_script.js"></script>
+
+  </div>
+
+</body>
+
+</html>

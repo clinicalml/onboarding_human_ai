@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <link rel="stylesheet" href="../task.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prolific Study Teach</title>
+  </head>
+
+<body style=" max-width: 100%; overflow-x: hidden;  height: auto;">
+  <script type="text/javascript">
+    function validate(evt) {
+      var theEvent = evt || window.event;
+      var key = theEvent.keyCode || theEvent.which;
+      key = String.fromCharCode(key);
+      var regex = /[]|\./;
+      if (!regex.test(key)) {
+        theEvent.returnValue = false;
+        if (theEvent.preventDefault) theEvent.preventDefault();
+      }
+    }
+  </script>
+  <div >
+    <div id="instructions">
+      <h2 id="instructions_header"> Instructions (scroll down for task)
+      </h2>
+      <p style="text-align: left; font-size: 1.5vw;">
+        - <strong>AI MODEL:  </strong> Images are now blurred and you have access to an Artificial Intelligence (AI) model that provides their prediction
+        <br>
+        - <strong> AI Button: </strong> A new button now appears called "Use AI Answer" in blue and allows you to select the AI's answer which you can then submit.<br>
+         Please press the button  if the AI helped with your answer and you want to use it's answer, if you agree with the answer of the AI but got the answer without it's help then don't press the button.<br>
+        - If the AI predicts there to be a traffic light, it will put a box around it in the image and a score (you can hide or show it with a button below the image)
+        <br>
+        - <strong>Our Recommendation:  </strong> Additionally, above the button and the AI's answer, we give you a recommendation whether you should use the AI answer or on your own.         This recommendation is based on comparing your estimated personal ability compared to the AI's ability, this recommendation is not always correct.
+        <br>
+        Try to do your best to get things correctly as there is a potential  bonus of up to 2$.
+
+   </div>
+
+   <button class="btn btn-primary" style="font-size: 2vw;  background-color:  rgb(54, 214, 134);  border: none; width:30vw;   height:7vh;  " type="test_timer_button" name="submit" id="test_timer_button">Please read instructions first</button>
+
+
+
+
+    <divs style="width: 100vw; height: 100vh;"  id="tasks">
+        <div class="progress">
+          <div class="progress-bar" id="prog_bar" role="progressbar" style="width: 0;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
+      <div class="image-container">
+        <!-- hide checkbox with opacity 0 -->
+          <img  id = "myimg" alt="blurredImage" style="display: none;" src="../Loading.gif"/> <!-- image will be added with javascript -->
+          <img  id = "myimgAI" alt="blurredImageAI" src="../Loading.gif"/> <!-- image will be added with javascript -->
+          <button class="btn btn-info" style="   font-size: 1.5vw; "  id="hideButton">Show/Hide AI Box </button>  &nbsp;  &nbsp;  &nbsp;  &nbsp;  
+          <button class="btn btn-info"  style="   font-size: 1.5vw; "  name="show_instr" id="show_instr_button"> Show Instructions</button> </button>
+
+      </div>
+        
+      <label for="question1" id="question1">
+        <h3 style="text-align: center; font-size: 2vw;">Is there a traffic light in the picture?</h3>
+      </label>
+     <center> <h3 id="ai_rec" style="text-align: center; width: 60vw; border: 1px solid black; padding: 10px; background-color: yellow; ">Recommendation: Ignore the AI </h2>
+     </center>
+    <div id="container_butts" class="row" >
+        <div class="column" style="width:49%;" >
+        <button  class="btn btn-primary" style="   font-size: 2vw; background-color: rgb(135, 208, 135);  border: none; width:22vw; height:7vh;margin-bottom: 1vh;"  id="yesButton">Yes</button> <br>
+        <button  class="btn btn-primary" style="  font-size: 2vw; background-color: rgb(247, 84, 84);   border: none; width:22vw;   height:7vh;  "   id="noButton">No</button>
+    </div>
+    <div class="column" style="width:49%;" >
+        <h3  style="font-size: 2vw;" id="ai_answer"> AI Predicts: </h2>
+        <button  class="btn btn-primary" style="   font-size: 2vw; background-color: rgb(58, 50, 181);  border: none; width:22vw; height:7vh;"  id="AIButton">Use AI Answer</button>
+    </div>
+    </div>
+      </break>
+
+      <h5 id="wrong-message"></h5>
+      <br>
+      <button class="btn btn-primary" style="font-size: 2vw;  background-color:  rgb(156, 156, 156);  border: none; width:30vw;   height:7vh;  " id="submitButton">Submit</button>
+  
+    </div>
+    
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+      <script src="./testing_task_ai_rec_script.js"></script>
+
+  </div>
+
+</body>
+
+</html>

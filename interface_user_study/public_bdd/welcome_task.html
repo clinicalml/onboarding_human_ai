@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <link rel="stylesheet" href="task.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0">
+    <title>Prolific Study Teach</title>
+  </head>
+  <!-- <title>Welcome task</title> -->
+
+<body  style=" max-width: 100%; overflow-x: hidden;  height: auto;">
+  <script type="text/javascript">
+    function validate(evt) {
+      var theEvent = evt || window.event;
+      var key = theEvent.keyCode || theEvent.which;
+      key = String.fromCharCode(key);
+      var regex = /[]|\./;
+      if (!regex.test(key)) {
+        theEvent.returnValue = false;
+        if (theEvent.preventDefault) theEvent.preventDefault();
+      }
+    }
+  </script>
+
+  <div >
+    <div id="instructions">
+      <h2 id="instructions_header"> Instructions
+      </h2>
+      <p style="text-align: left; font-size: 1.5vw;">
+        - This experiment will be in 3 stages. <br>
+        - Task: You will be shown images of road scenarios from the point of view of inside a car, you will be asked to respond to check whether in the image there is any traffic light (red or green or yellow)
+        <br>
+        Your goal in is to be as accurate as you can be. <br>
+        - Interface: you will have to first select an answer by choosing the corresponding button "Yes" or "No" and then pressing the "Submit" button. <br>
+          You can track how many examples remain by looking at the progress bar on the top of the webpage after you press next.
+        You will keep trying each example until you get the answer correct
+      </p>
+
+      <h3 style="text-align: center; font-size: 2vw;">Example (no need to click, only for viewing):</h3>
+
+      <div style="border: 1px solid black; padding: 10px;">
+        <img  id = "myimgAItest" alt="blurredImageAI" src="test_image.jpg"/> <!-- image will be added with javascript -->
+
+        <h3 style="text-align: center; font-size: 2vw;">Is there a traffic light in the picture?</h3>
+
+
+  <div class="d-grid gap-2" style="  display: flex;   justify-content: center;      ">
+    <button  class="btn btn-primary" style="   font-size: 2vw; background-color: rgb(135, 208, 135);  border: none; width:22vw; height:7vh;margin-bottom: 1vh;"  id="testyes">Yes</button> <br>
+      <button  class="btn btn-primary" style="  font-size: 2vw; background-color: rgb(247, 84, 84);   border: none; width:22vw;   height:7vh;  "   id="testno">No</button>
+  </div>
+
+  <button class="btn btn-primary" style="font-size: 2vw;  background-color:  rgb(156, 156, 156);  border: none; width:30vw;   height:7vh;  " id="submitButtontest">Submit</button>
+
+</div>
+
+   </div>
+
+
+   <button class="btn btn-primary" style="font-size: 2vw;  background-color:  rgb(54, 214, 134);  border: none; width:30vw;   height:7vh;  "  type="test_timer_button" name="submit" id="test_timer_button">Please read instructions first</button>
+
+
+   <div id="tasks">
+      <h2>Practice Examples </h1>
+        <div class="progress">
+          <div class="progress-bar" id="prog_bar" role="progressbar" style="width: 0;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
+      <div class="image-container">
+        <!-- hide checkbox with opacity 0 -->
+          <img  id = "myimg" alt="blurredImage" src="Loading.gif"/> <!-- image will be added with javascript -->
+      </div>
+        
+      <label for="question1" id="question1">
+        <h3 style="text-align: center; font-size: 2vw;">Is there a traffic light in the picture?</h3>
+      </label>
+      <div class="d-grid gap-2" style="  display: flex;   justify-content: center;      ">
+        <button  class="btn btn-primary" style="   font-size: 2vw; background-color: rgb(135, 208, 135);  border: none; width:50vw; height:7vh;"  id="yesButton">Yes</button>
+        <button  class="btn btn-primary" style="  font-size: 2vw; background-color: rgb(247, 84, 84);   border: none; width:50vw;   height:7vh;  "   id="noButton">No</button>
+      </div>
+      </break>
+
+      <div class="column">
+      </div>
+      <h5 id="wrong-message">Incorrect, please try again</h5>
+      <br>
+      <button class="btn btn-primary" style="font-size: 2vw;  background-color:  rgb(156, 156, 156);  border: none; width:30vw;   height:7vh;  " id="submitButton">Submit</button>
+    </div>
+     
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+      <script src="./welcome_task_script.js"></script>
+</div>
+  </div>
+
+</body>
+
+</html>

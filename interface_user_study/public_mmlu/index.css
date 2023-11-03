@@ -1,0 +1,74 @@
+/* Styling the Body element i.e. Color, Font, Alignment */
+body {
+    background-color: rgb(168, 162, 162);
+    font-family: Verdana;
+    text-align: left;
+    margin: 20px;
+}
+
+label {
+  font-size: 150%;
+  display: inline-block;
+}
+
+form {
+  background-color: #fff;
+  text-align: left;
+  max-width: 80%;
+  margin: 10px auto;
+  padding: 10px 20px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+form:invalid input[type="submit"] {
+  background-color: red
+}
+
+
+/* Styling form-control Class */
+.form-control {
+  text-align: left;
+  max-width: 50%;
+  margin-bottom: 25px;
+}
+
+/* Styling form-control Label */
+.form-control label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+  /* Uniform text field size */
+  width: 300px;
+  box-sizing: border-box;
+  /* Match form field borders */
+  border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+  /* Additional highlight for focused elements */
+  border-color: #000;
+}
+/* Styling Button */
+button {
+  background-color: rgb(201, 201, 212);
+  border: 1px solid #1a1919;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 21px;
+  width: 95%;
+  margin-top: 50px;
+  margin-left: 10px;
+  padding: 10px 20px;
+  margin-bottom: 100px;
+}
+button:hover {
+  background-color: #b68ec3; /* Green */
+  color: white;
+}

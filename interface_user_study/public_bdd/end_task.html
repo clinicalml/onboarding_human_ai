@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thank you!</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body  style=" max-width: 100%; overflow-x: hidden;  height: auto;">
+    <h1 id="header_end"> </h1> <br>
+
+    <p id="worker_id_send" style="background-color:white;  width: 75%; border:2px; border-style:solid; border-color:black;">  </p>
+
+    <div id="body_end" style="  background-color: #ffffff;   display: table; margin-right: 1%; margin-left: 1%;">
+
+
+
+  <h2 id="header">You're almost done! Please answer these final questions to finish the task and press the Continue button at the end of page when you're done </h2>
+
+  <label > What was your decision process for relying on the AI answer and for when to ignore the AI answer? Please provide a brief sentence for each.</label> </br>
+  <textarea id="quest1" style="width: 95%;" name="quest1" required> </textarea> <br>
+
+  <label >Any comments or feebdack? </label> </br>
+  <textarea id="quest2" style="width: 95%;" name="quest2" required> </textarea>
+  <br>
+  <p style="color:red; font-size: 155%;" id="message_highlighted"> </p>
+<br>
+  <button type="button" name="proceed_exp" id="proceed_exp"> Continue</button>
+
+</div>
+  </body>
+
+
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+  <script src="./end_task_script.js"></script>
+
+</html>
