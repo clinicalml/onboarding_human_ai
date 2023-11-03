@@ -1,7 +1,7 @@
 # IntegrAI: Effective Human-AI Teams via Learned Natural Language Rules and Onboarding
 
 
-Associated code for paper [Effective Human-AI Teams via Learned Natural Language Rules and Onboarding]()   published in NeurIPS 2023 (spotlight).
+Associated code for paper [Effective Human-AI Teams via Learned Natural Language Rules and Onboarding](https://arxiv.org/abs/2311.01007)   published in NeurIPS 2023 (spotlight).
 
 
 # What is it?
@@ -96,4 +96,10 @@ Note: all experiments involve randomness, so results are not deterministic.
 # Citation
 
 ```
+@article{mozannar2023effective,
+     title={Effective Human-AI Teams via Learned Natural Language Rules and Onboarding}, 
+      author={Hussein Mozannar and Jimin J Lee and Dennis Wei and Prasanna Sattigeri and Subhro Das and David Sontag},
+      year={2023},
+      journal={Advances in Neural Information Processing Systems}
+}
 ```
