@@ -11,7 +11,7 @@ People are relying on AI agents to assist them with various tasks. The human mus
 rely on the agent, collaborate with the agent, or ignore its suggestions. Our procedure gives a way to better understand how the human and the AI should collaborate.
 
 
-The first piece is the human's prior knowldge and trust of the AI, i.e. does the human trust the AI on all the data, never trusts the AI, or trust the AI on only a subset of the data. Given the human's prior, we discover and describe regions of the data space that disprove the human's prior. For example, if the human always trusted the AI, we find a (or many) susbet(s) of the data and describe it in natural languague where the AI has worse performanc than the human (and vice versa).
+The first piece is the human's prior knowldge and trust of the AI, i.e. does the human trust the AI on all the data, never trusts the AI, or trust the AI on only a subset of the data. Given the human's prior, we discover and describe regions of the data space that disprove the human's prior. For example, if the human always trusted the AI, we find a (or many) susbet(s) of the data and describe it in natural language where the AI has worse performanc than the human (and vice versa).
 
 
 Concretely, our procedure is composed of two parts:
