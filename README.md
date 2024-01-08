@@ -1,7 +1,7 @@
 # IntegrAI: Effective Human-AI Teams via Learned Natural Language Rules and Onboarding
 
 
-Associated code for paper [Effective Human-AI Teams via Learned Natural Language Rules and Onboarding](https://arxiv.org/abs/2311.01007)   published in NeurIPS 2023 (spotlight).
+Associated code for paper [Effective Human-AI Teams via Learned Natural Language Rules and Onboarding](https://arxiv.org/abs/2311.01007)   published in NeurIPS 2023 (spotlight). 
 
 
 # What is it?
@@ -103,3 +103,8 @@ Note: all experiments involve randomness, so results are not deterministic.
       journal={Advances in Neural Information Processing Systems}
 }
 ```
+
+# Acknowledgements
+
+This work is partially funded by the MIT-IBM Watson AI Lab.
+
