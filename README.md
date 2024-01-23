@@ -22,6 +22,8 @@ Concretely, our procedure is composed of two parts:
 
 Each of these algorithms is implemented in this repo as well as baseline approaches with multiple datasets to test them on.
 
+For a demo, see [colab jupyter notebook](https://colab.research.google.com/drive/1tKBkRQ1zupD-LzDHwBER_1FAtlCs2Ct6?usp=sharing).
+
 ![Overview of IntegrAI procedure](figure1_teach.jpg)
 
 
@@ -49,7 +51,7 @@ To download pre-processed datasets and user study data, use this google drive li
 # Demo
 
 
-In [demo.ipynb](demo.ipynb) we give an end-to-end example where we load a subset of the imagenet dataset, a pre-trained AI model and then discover regions of the model where the model is really good and describe them.
+In [colab jupyter notebook](https://colab.research.google.com/drive/1tKBkRQ1zupD-LzDHwBER_1FAtlCs2Ct6?usp=sharing) we give an end-to-end example where we load a subset of the imagenet dataset, a pre-trained AI model and then discover regions of the model where the model is really good and describe them.
 
 More demos will be included later on.
 
