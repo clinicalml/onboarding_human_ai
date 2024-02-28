@@ -24,7 +24,7 @@ Each of these algorithms is implemented in this repo as well as baseline approac
 
 The algorithm IntegrAI can be used to compare two models, or look at the errors of a single model. 
 
-For a demo, see [colab jupyter notebook](https://colab.research.google.com/drive/1L22IX965T_fzbMP7BNAH7PkhJYW2Ekrg?usp=sharing).
+For a demo, see [colab jupyter notebook](https://colab.research.google.com/drive/1L22IX965T_fzbMP7BNAH7PkhJYW2Ekrg?usp=sharing). The main code is in the folder [integrai](integrai)
 
 ![Overview of IntegrAI procedure](figure1_teach.jpg)
 
@@ -73,9 +73,9 @@ An NLP demo will soon be provided as well.
 This code repository is structured as follows:
 
 
-- in [integrai](integrai) we have a minimal code implementation of our algorithm IntegrAI
+- in [integrai](integrai) we have a minimal code implementation of our algorithm IntegrAI - if you're just interested in applying the method, only look at this folder
 
-- in [src](src) we have the code for the core functionalities of our algorithms organized as follows:
+- in [src](src) we have the code for the core functionalities of our algorithms for the paper organized as follows:
 
     -[src/datasets_hai](src/datasets_hai) has files for each dataset used in our method and code to donwload and process the datasets.
     
