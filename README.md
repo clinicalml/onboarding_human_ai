@@ -1,7 +1,7 @@
 # IntegrAI: Effective Human-AI Teams via Learned Natural Language Rules and Onboarding
 
 
-Associated code for paper [Effective Human-AI Teams via Learned Natural Language Rules and Onboarding](https://arxiv.org/abs/2311.01007)   published in NeurIPS 2023 (spotlight). 
+Associated code for paper [Effective Human-AI Teams via Learned Natural Language Rules and Onboarding](https://arxiv.org/abs/2311.01007)  published in NeurIPS 2023 (spotlight). 
 
 
 # What is it?
@@ -22,7 +22,7 @@ Concretely, our procedure is composed of two parts:
 
 Each of these algorithms is implemented in this repo as well as baseline approaches with multiple datasets to test them on.
 
-For a demo, see [colab jupyter notebook](https://colab.research.google.com/drive/1tKBkRQ1zupD-LzDHwBER_1FAtlCs2Ct6?usp=sharing).
+For a demo, see [colab jupyter notebook](https://colab.research.google.com/drive/1L22IX965T_fzbMP7BNAH7PkhJYW2Ekrg?usp=sharing).
 
 ![Overview of IntegrAI procedure](figure1_teach.jpg)
 
@@ -59,7 +59,7 @@ To download pre-processed datasets and user study data, use this google storage 
 
 # Demo and Guide
 
-For an example of how to use IntegrAI, we provide an example on an image classification task in the notebook [demo_imagenet.ipynb](demo_imagenet.ipynb). For a Colab version please check
+For an example of how to use IntegrAI, we provide an example on an image classification task in the notebook [demo_imagenet.ipynb](demo_imagenet.ipynb). For a Colab version please check [colab jupyter notebook](https://colab.research.google.com/drive/1L22IX965T_fzbMP7BNAH7PkhJYW2Ekrg?usp=sharing)
 
 
 An NLP demo will soon be provided as well.

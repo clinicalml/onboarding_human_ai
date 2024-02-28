@@ -1,6 +1,6 @@
 import sys
-from .integrai_discover import IntegrAIDiscover
-from .integrai_describe import IntegrAIDescribe
+from integrai_discover import IntegrAIDiscover
+from integrai_describe import IntegrAIDescribe
 import numpy as np
 import torch
 
