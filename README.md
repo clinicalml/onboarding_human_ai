@@ -20,7 +20,9 @@ Concretely, our procedure is composed of two parts:
 
 - A region description algorithm (IntegrAI-describe) that descibes these subsets in natural language using large language models (LLMs).
 
-Each of these algorithms is implemented in this repo as well as baseline approaches with multiple datasets to test them on.
+Each of these algorithms is implemented in this repo as well as baseline approaches with multiple datasets to test them on. 
+
+The algorithm IntegrAI can be used to compare two models, or look at the errors of a single model. 
 
 For a demo, see [colab jupyter notebook](https://colab.research.google.com/drive/1L22IX965T_fzbMP7BNAH7PkhJYW2Ekrg?usp=sharing).
 
