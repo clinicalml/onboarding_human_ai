@@ -1,5 +1,9 @@
 /data
 /jimin
+/venv
+/val
+venv
+val
 /.ipynb_checkpoints
 test.ipynb
 *.csv

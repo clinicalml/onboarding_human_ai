@@ -34,6 +34,15 @@ Clone the repo:
 git clone https://github.com/clinicalml/onboarding_human_ai.git
 ```
 
+For using the IntegrAI algorithm and the demo, the following requirements suffice:
+
+```bash
+pip install -r requirements.txt
+```
+
+For replicating the paper results:
+
+
 cd into the repo and create a new conda environmnt (Python 3.8.13) from our environment.yml file:
 
 ```bash
@@ -45,7 +54,7 @@ Finally activate the environment:
 conda activate onboardai
 ```
 
-To download pre-processed datasets and user study data, use this google drive link https://drive.google.com/file/d/1Hh4PKR7JbbgLx8_C2IQkphtXK3wixum1/view?usp=sharing
+To download pre-processed datasets and user study data, use this google storage link https://storage.googleapis.com/public-research-data-mozannar/data_saved_onboarding.zip
 
 
 # Demo
@@ -59,6 +68,9 @@ More demos will be included later on.
 # Organization
 
 This code repository is structured as follows:
+
+
+- in [integrai](integrai) we have a minimal code implementation of our algorithm IntegrAI
 
 - in [src](src) we have the code for the core functionalities of our algorithms organized as follows:
 
