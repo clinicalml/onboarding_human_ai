@@ -57,12 +57,13 @@ conda activate onboardai
 To download pre-processed datasets and user study data, use this google storage link https://storage.googleapis.com/public-research-data-mozannar/data_saved_onboarding.zip
 
 
-# Demo
+# Demo and Guide
+
+For an example of how to use IntegrAI, we provide an example on an image classification task in the notebook [demo_imagenet.ipynb](demo_imagenet.ipynb). For a Colab version please check
 
 
-In [colab jupyter notebook](https://colab.research.google.com/drive/1tKBkRQ1zupD-LzDHwBER_1FAtlCs2Ct6?usp=sharing) we give an end-to-end example where we load a subset of the imagenet dataset, a pre-trained AI model and then discover regions of the model where the model is really good and describe them.
+An NLP demo will soon be provided as well.
 
-More demos will be included later on.
 
 
 # Organization

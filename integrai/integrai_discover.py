@@ -368,7 +368,11 @@ class IntegrAIDiscover:
             logging.info(f'current loss is {current_loss}')
             if len(self.teaching_set) >= self.teaching_points:
                 logging.info(f'DONE TEACHING')
+                print(f'Found {len(self.teaching_set)} regions')
                 return self.teaching_set
+        logging.info(f'DONE TEACHING')
+        print(f'Found {len(self.teaching_set)} regions')
+        return self.teaching_set
 
     def get_defer_preds(self, data_x, prior_rejector = None):
         """
