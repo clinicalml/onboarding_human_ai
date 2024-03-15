@@ -6,13 +6,13 @@ import random
 import sys
 import zipfile
 
-import cv2
-import detectron2
 
 # import some common libraries
 import numpy as np
 import requests
-from detectron2.utils.logger import setup_logger
+
+import cv2
+
 
 sys.path.append("..")
 sys.path.append("../utils")
@@ -24,21 +24,11 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import requests
 import torch
-import torchvision.datasets as dset
-import torchvision.transforms as transforms
 
-# import some common detectron2 utilities
-from detectron2 import model_zoo
-from detectron2.checkpoint import DetectionCheckpointer
-from detectron2.config import get_cfg
-from detectron2.data import DatasetCatalog, MetadataCatalog
-from detectron2.engine import DefaultPredictor
-from detectron2.modeling import build_model
-from detectron2.utils.visualizer import Visualizer
+
 from PIL import Image
 from sklearn.metrics import classification_report
 from tqdm import tqdm
-from transformers import CLIPModel, CLIPProcessor
 from utils.utils import *
 
 
@@ -142,6 +132,19 @@ def pil_to_detectronformat(img):
 
 
 def prepare_coco_dataset(path_data, BLURRY_DATASET=False, label_chosen=0):
+    import detectron2
+    from detectron2.utils.logger import setup_logger
+    import torchvision.datasets as dset
+    import torchvision.transforms as transforms
+    from detectron2 import model_zoo
+    from detectron2.checkpoint import DetectionCheckpointer
+    from detectron2.config import get_cfg
+    from detectron2.data import DatasetCatalog, MetadataCatalog
+    from detectron2.engine import DefaultPredictor
+    from detectron2.modeling import build_model
+    from detectron2.utils.visualizer import Visualizer
+    from transformers import CLIPModel, CLIPProcessor
+
     if BLURRY_DATASET:
         BLUR_SIZE = 25
         BLUR_SIGMA = 17

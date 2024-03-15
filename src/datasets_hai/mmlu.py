@@ -23,13 +23,10 @@ import pandas as pd
 import regex as re
 import requests
 import torch
-import torchvision.datasets as dset
-import torchvision.transforms as transforms
 from PIL import Image
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics import classification_report
 from tqdm import tqdm
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, CLIPModel, CLIPProcessor
 from utils.metrics_hai import compute_metrics
 from utils.utils import *
 from utils.utils import loss_01

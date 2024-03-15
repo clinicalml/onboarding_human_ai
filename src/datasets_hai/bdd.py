@@ -12,28 +12,19 @@ import requests
 
 # Check Pytorch installation
 import torch
-import torchvision
 from PIL import Image
 from tqdm import tqdm
 
 # get image embeddings
-from transformers import CLIPModel, CLIPProcessor
 
 print(torch.__version__, torch.cuda.is_available())
-# Check MMDetection installation
-import mmdet
 
-print(mmdet.__version__)
 import json
 import random
 import subprocess
 
-import cv2
-import mmcv
 from IPython.display import Image, display
-from mmcv.runner import load_checkpoint
-from mmdet.apis import inference_detector, show_result_pyplot
-from mmdet.models import build_detector
+
 from PIL import Image
 from sklearn.metrics import classification_report
 from tqdm import tqdm
@@ -163,6 +154,14 @@ def download_models_bdd(path_data):
 
 def prepare_bdd_dataset(path_data, device="cuda:0", ai_blur_scale=0, ai_blur_var=0):
     # download stuff
+
+    import cv2
+    import mmcv
+    from mmcv.runner import load_checkpoint
+    from mmdet.apis import inference_detector, show_result_pyplot
+    from mmdet.models import build_detector
+    from transformers import CLIPModel, CLIPProcessor
+
     download_bdd(path_data)
     download_models_bdd(path_data)
 
